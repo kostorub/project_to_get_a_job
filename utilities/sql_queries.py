@@ -7,7 +7,8 @@ create_table_logging_query =\
         request TEXT NOT NULL,
         response TEXT NOT NULL,
         request_time TEXT NOT NULL,
-        response_time TEXT NOT NULL
+        response_time TEXT NOT NULL,
+        response_code INTEGER NOT NULL
     );"""
 
 logging_insert =\
