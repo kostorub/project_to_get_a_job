@@ -1,8 +1,10 @@
-project_to_get_a_job
+###### project_to_get_a_job
 
 Using aiohttp + sqlite to get weather for towns with names like London or Moscow 
 
-Clone repo and follow these steps.
+At first, install Python 3.5+. The project was developed and tested on the 
+version 3.7.3
+Clone the repo and follow these steps.
 
 ```
 git clone https://github.com/kostorub/project_to_get_a_job.git
@@ -24,15 +26,15 @@ python app.py
 ```
 
 
-For test make
+For the test, do
 ```
 curl http://127.0.0.1:7000/weather/get_weather?town_name=Moscow
 ```
-In result check field content
+In the result check the field content
 `
 Content: {"town": "Moscow", "temp": 13.14, "units": "metric"}
 `
 
-To check database with logs use https://sqlitebrowser.org/
+To check the database with the logs, use https://sqlitebrowser.org/
 
 The database file is in the root folder and is called **sqlite.db**
