@@ -4,6 +4,7 @@ import aiosqlite
 
 from utilities.sql_queries import create_table_logging_query
 
+# Session for the requests to the weather provider
 request_session = aiohttp.ClientSession()
 
 

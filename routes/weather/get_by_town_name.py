@@ -25,7 +25,8 @@ async def get_weather(request):
         )
         raise web.HTTPBadRequest()
 
-    open_weather_request = f"https://api.openweathermap.org/data/2.5/weather?q=" \
+    open_weather_request = \
+        f"https://api.openweathermap.org/data/2.5/weather?q=" \
         f"{town_name}" \
         f"&APPID=" \
         f"{open_weather_config['api_key']}" \
@@ -62,8 +63,7 @@ async def get_weather(request):
     await log(
         request=request,
         result=result,
-        time=time() - t_s,
-        code=200
+        time=time() - t_s
     )
 
     return json_response(result)

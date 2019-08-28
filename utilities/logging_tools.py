@@ -8,6 +8,16 @@ from utilities.sql_queries import logging_insert
 
 
 async def log(*args, **kwargs):
+    """
+    Logging data in sqlite
+    :param args:
+    :param kwargs:
+    request - request to the route
+    result - dict with answer to the client
+    time - processing time
+    code - http response code
+    :return:
+    """
     request = kwargs.get("request", None)
     if request is None:
         return
